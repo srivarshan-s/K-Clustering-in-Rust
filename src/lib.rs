@@ -48,7 +48,7 @@ impl KClustering {
         self.cluster(feat, max_iter);
     }
 
-    pub fn predict(&self, test_feat: &Vec<Vec<f32>>) {
+    pub fn predict(&self, test_feat: &[Vec<f32>]) {
         println!("Prediction function");
     }
 
@@ -111,18 +111,14 @@ impl KClustering {
         self.cluster(feat, iter_num-1)
     }
 
-    fn cluster_check(&self, cluster_points_1: &Vec<Vec<f32>>, cluster_points_2: &Vec<Vec<f32>>) -> bool {
+    fn cluster_check(&self, cluster_points_1: &[Vec<f32>], cluster_points_2: &[Vec<f32>]) -> bool {
         let mut flag: i32 = 0;
         for i in 0..cluster_points_1.len() {
             if cluster_points_1[i] != cluster_points_2[i] {
                 flag = 1;
             }
         }
-        if flag == 1 {
-            false
-        } else {
-            true
-        }
+        flag != 1
     }
 
     fn mean(
