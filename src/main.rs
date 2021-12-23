@@ -11,7 +11,8 @@ fn main() {
     kmean.fit(&num_clusters, &feat, max_iter);
     dbg!(&kmean);
     let test_feat: Vec<Vec<f32>> = hardcode_test();
-    kmean.predict(&test_feat);
+    let test_pred = kmean.predict(&test_feat);
+    dbg!(test_pred);
 }
 
 fn hardcode_init() -> (i32, Vec<Vec<f32>>) {
