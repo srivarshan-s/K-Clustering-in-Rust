@@ -1,5 +1,5 @@
 // TODO: Implement mode clustering
-// TODO: Implement median clustering
+// TODO: Implement medoid clustering
 // TODO: Implement elbow curve method to find the optimal number of clusters
 
 use rand::Rng;
@@ -82,7 +82,6 @@ impl KClustering {
     }
 
     fn cluster(&mut self, feat: &[Vec<f32>], iter_num: i32) {
-        // dbg!(&iter_num);
         if iter_num == 0 {
             return;
         }
