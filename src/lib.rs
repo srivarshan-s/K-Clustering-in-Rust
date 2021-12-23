@@ -51,6 +51,16 @@ impl KClustering {
 
     pub fn predict(&self, test_feat: &[Vec<f32>]) {
         println!("Prediction function");
+        let mut prediction: Vec<i32> = Vec::new();
+        for point in test_feat {
+            let mut min_dist_idx = 0;
+            for i in 0..self.cluster_points.len() {
+                if self.get_dist(point, &self.cluster_points[i]) <= self.get_dist(point, &self.cluster_points[min_dist_idx]) {
+                    min_dist_idx = i;
+                }
+            }
+            prediction.push(min_dist_idx as i32);
+        }
     }
 
     fn init_cluster_points(&mut self, num_clusters: &i32, feat: &[Vec<f32>]) {
