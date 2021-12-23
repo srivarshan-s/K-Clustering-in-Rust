@@ -1,4 +1,5 @@
 // TODO: Implement mode clustering
+// TODO: Implement median clustering
 // TODO: Implement prediction function
 // TODO: Implement elbow curve method to find the optimal number of clusters
 
