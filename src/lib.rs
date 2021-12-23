@@ -1,6 +1,5 @@
 // TODO: Implement mode clustering
 // TODO: Implement median clustering
-// TODO: Implement prediction function
 // TODO: Implement elbow curve method to find the optimal number of clusters
 
 use rand::Rng;
@@ -50,7 +49,6 @@ impl KClustering {
     }
 
     pub fn predict(&self, test_feat: &[Vec<f32>]) -> Vec<i32>{
-        println!("Prediction function");
         let mut prediction: Vec<i32> = Vec::new();
         for point in test_feat {
             let mut min_dist_idx = 0;
