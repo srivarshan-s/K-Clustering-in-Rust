@@ -32,7 +32,7 @@ fn hardcode_init() -> (i32, Vec<Vec<f32>>) {
     (num_clusters, feat)
 }
 
-fn hardcode_test() -> Vec<Vec<f32>>{
+fn hardcode_test() -> Vec<Vec<f32>> {
     vec![
         vec![1.7, 1.8],
         vec![2.6, 1.3],
@@ -44,5 +44,5 @@ fn hardcode_test() -> Vec<Vec<f32>>{
         vec![5.1, 1.9],
         vec![4.9, 2.7],
         vec![1.3, 4.5],
-    ] 
+    ]
 }
