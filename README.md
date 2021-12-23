@@ -1,5 +1,5 @@
 # K-Clustering-in-Rust
-K Means and Modes Clustering algorithms implemented in Rust Programming Language
+K Means, Modes and Medians Clustering algorithms implemented in Rust Programming Language
 
 ### TODO
 1. Implement mode clustering function
